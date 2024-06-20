@@ -20,6 +20,7 @@ const App = () => {
     },[]);
 
     const searchMovies = async (title) => {
+        alert("searched");
         const response = await fetch(`${API_URL}&s=${title}`);
         const data = await response.json();
 
