@@ -36,7 +36,8 @@ const App = () => {
                     onChange={(e)=>setSearchTerm(e.target.value)}
                     onKeyDown={(e)=> {
                         if (e.key === "Enter") {
-                            searchMovies(searchTerm)
+                            alert("entered");
+                            searchMovies(searchTerm);
                         }
                     }}
                 />
