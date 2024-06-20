@@ -9,7 +9,7 @@ import './App.css';
 // import SearchIcon from './search.svg';
 
 
-const API_URL = 'http://www.omdbapi.com/?i=tt3896198&apikey=c208b8ff'
+const API_URL = 'https://www.omdbapi.com/?i=tt3896198&apikey=c208b8ff'
 
 const App = () => {
     const [searchTerm, setSearchTerm] = useState("");
@@ -20,7 +20,7 @@ const App = () => {
     },[]);
 
     const searchMovies = async (title) => {
-        alert("searched");
+        // alert("searched");
         const response = await fetch(`${API_URL}&s=${title}`);
         const data = await response.json();
 
@@ -37,7 +37,7 @@ const App = () => {
                     onChange={(e)=>setSearchTerm(e.target.value)}
                     onKeyDown={(e)=> {
                         if (e.key === "Enter") {
-                            alert("entered");
+                            // alert("entered");
                             searchMovies(searchTerm);
                         }
                     }}
